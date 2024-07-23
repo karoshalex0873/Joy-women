@@ -58,13 +58,16 @@ const Login = () => {
                 required
               />
             </div>
+            <Link to="/dashboard">
             <button
               type="submit"
               className={`bg-orange-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-orange-600 transition duration-300 w-full ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
               disabled={loading}
+            
             >
               {loading ? 'Logging in...' : 'Login'}
             </button>
+            </Link>
             <p className="text-center mt-4 text-sm">
               <Link to="/register" className="text-orange-500 hover:underline">Don't have an account? Register here</Link>
             </p>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { HomeIcon, BanknotesIcon, WalletIcon, DocumentTextIcon, BriefcaseIcon } from '@heroicons/react/24/outline';
 import Savings from './services/Savings';
+import { Link } from 'react-router-dom';
 import Deposit from './services/Deposit';
 import Balance from './services/Balance';
 import Loans from './services/Loans';
@@ -27,10 +28,13 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="flex h-screen bg-gray-100 py-3">
+    <div>
+      <button className="bg-orange-500  text-white p-1 rounded-md"><Link to="/">Home</Link></button>
+      
+       <div className="flex h-screen bg-gray-100 py-3 px-2">
       {/* Sidebar */}
       <div className=" lg:w-64 md:w-30 w-28 bg-white shadow-lg border-r border-gray-200 rounded-3xl" >
-        <div className="flex items-center justify-center h-16 bg-orange-500 rounded-xl text-white text-2xl font-bold">
+        <div className="flex items-center justify-center h-16 bg-orange-500 rounded-xl text-white lg:text-2xl font-bold">
           Dashboard
         </div>
         <nav className="mt-8">
@@ -101,6 +105,8 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
+    </div>
+   
   );
 };
 

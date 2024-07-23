@@ -1,14 +1,15 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
 import hero from '../assets/img.jpg'
-import Dashboard from './Dashbord';
+
+
 
 const Hero = () => {
+  const [display, setDisplay] = useState(false);
+
   return (
     <>
-      {/* Navbar */}
-      <Dashboard />
-
+  
       <nav className="bg-orange-600 text-white py-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center px-6">
         <h1 className="text-3xl font-bold">Joy Women Banking</h1>
@@ -42,9 +43,11 @@ const Hero = () => {
           <div className="flex flex-col md:flex-row justify-evenly items-center text-black font-medium mb-12">
             <div className="text-center md:text-left mb-6 md:mb-0">
               <h2 className="text-3xl mb-4">Welcome Back!</h2>
-              <p className="text-lg mb-4">We’re here to support you on your financial journey. Explore our tools and resources designed specifically for women.</p>
-              <button className="bg-orange-500 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-orange-600 transition duration-300">
-                Learn More
+              <p className="text-lg mb-4">We’re here to support you on your financial journey. <br />Explore our tools and resources designed specifically for women.</p>
+              <button className="bg-orange-500 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-orange-600 transition duration-300"
+              onClick={() => setDisplay(!display)}
+              >
+                {display ? "Learn More": "Here is the info"}
               </button>
             </div>
             <div className="flex justify-center">
@@ -94,19 +97,20 @@ const Hero = () => {
           <div className="text-center mb-12" id="success">
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Success Stories</h3>
             <p className="text-lg text-gray-600 mb-6">See how other women have transformed their lives with our financial tools and marketing strategies.</p>
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-24">
               <img
-                src="https://image.shutterstock.com/image-photo/happy-young-african-woman-holding-money-2068177967"
-                alt="Success Story 1"
+                src={hero}
+                  alt="Success Story 1"
                 className="rounded-lg shadow-lg w-64 h-40 object-cover"
               />
               <img
-                src="https://image.shutterstock.com/image-photo/happy-young-african-woman-holding-money-2068177967"
-                alt="Success Story 2"
+                src={hero}
+                 alt="Success Story 2"
                 className="rounded-lg shadow-lg w-64 h-40 object-cover"
               />
               <img
-                src="https://image.shutterstock.com/image-photo/happy-young-african-woman-holding-money-2068177967"
+                src={hero}
+
                 alt="Success Story 3"
                 className="rounded-lg shadow-lg w-64 h-40 object-cover"
               />
