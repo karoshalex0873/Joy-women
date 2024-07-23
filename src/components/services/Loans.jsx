@@ -29,8 +29,8 @@ const Loans = () => {
       <section className="mb-8 p-6 bg-gradient-to-r from-orange-100 to-white rounded-lg shadow-md">
         <h2 className="text-3xl font-bold mb-6 text-gray-800">Choose Your Loan Type</h2>
         <p className="text-lg mb-6 text-gray-600">
-          Select the loan that best fits your needs and start your journey towards financial freedom.
-          Whether you're looking for long-term stability or short-term flexibility, we have the right option for you.
+          Select the loan that best fits your needs and start your journey towards financial freedom. <br />
+          Whether you're looking for long-term stability or short-term flexibility, <br />we have the right option for you.
         </p>
         <div className="flex flex-col md:flex-row gap-4 md:gap-6">
           <button
